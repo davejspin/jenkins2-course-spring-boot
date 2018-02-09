@@ -47,7 +47,7 @@ public class ChatService {
 
 	@org.atmosphere.config.service.Message(encoders = JacksonEncoderDecoder.class, decoders = JacksonEncoderDecoder.class)
 	public Message onMessage(Message message) throws IOException {
-		this.logger.info("Message {} received from Author {}", message.getMessage(),
+		this.logger.info("Message {} sent by App User {}", message.getMessage(),
 				message.getAuthor());
 		return message;
 	}
